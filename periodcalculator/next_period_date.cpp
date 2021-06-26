@@ -22,6 +22,7 @@ int main()
     cout << "Enter the cycle days: example(28) :";
     cin >> cycle;
     cout << endl;
+
     switch (month)
     {
     case 2:
@@ -72,7 +73,7 @@ int main()
         }
         else
         {
-            result = day + 28;
+            result = day + cycle;
         }
         cout << "Your next period date is probably after " << result << "/" << month << "/" << year << endl;
 
