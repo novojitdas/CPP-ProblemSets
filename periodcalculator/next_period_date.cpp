@@ -19,6 +19,9 @@ int main()
     cin >> day;
     cout << endl;
 
+    cout << "Enter the cycle days: example(28) :";
+    cin >> cycle;
+    cout << endl;
     switch (month)
     {
     case 2:
@@ -51,8 +54,8 @@ int main()
 
     while (--test)
     {
-        int a = n_days - day; // first date of p - last date of month
-        if (a <= 28)
+        int a = n_days - day; // last day of month - first day of bleeding
+        if (a <= cycle)
         {
             month = month + 1;
             if (month == 13)
@@ -62,7 +65,10 @@ int main()
             }
             result = cycle - a;
             if (result == 0)
-                result = 1;
+            {
+                result = n_days;
+                month = month - 1; // previous month
+            }
         }
         else
         {
@@ -98,7 +104,7 @@ int main()
             n_days = 31;
             break;
         }
-        day = result;
+        day = result; // next predicted period day
     }
     return 0;
 }
