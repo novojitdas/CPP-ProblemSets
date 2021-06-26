@@ -75,7 +75,7 @@ int main()
         {
             result = day + cycle;
         }
-        cout << "Your next period date is probably after " << result << "/" << month << "/" << year << endl;
+        cout << "Your next period date is probably after or at " << result << "/" << month << "/" << year << endl;
 
         switch (month)
         {
