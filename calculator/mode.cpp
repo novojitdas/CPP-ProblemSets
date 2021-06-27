@@ -32,7 +32,32 @@ int main()
 
     if (countMode == 1) // for all different values, default value will be mod / maximum value
     {
-        mode = 28; // default date of period
+        // mode = 28; // default date of period
+
+        /* prints the biggest value of the input
+        int temp = array[0];
+        for (int i = 1; i < 6; i++)
+        {
+            if (array[i] > temp)
+                temp = array[i];
+        }
+        mode = temp;
+        */
+        // sorting
+        /* need to fix this code
+        int check = array[0];
+        for (int i = 1; i < 6; i++)
+        {
+            if (array[i] < check)
+            {
+                int sortTemp = array[i];
+                array[i - 1] = sortTemp;
+                array[i] = check;
+            }
+            else
+                check = array[i];
+        }
+        */
     }
     cout << "Mode :" << mode << endl;
     return 0;
